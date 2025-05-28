@@ -1,0 +1,329 @@
+{
+  "sections": [
+    {
+      "id": "header",
+      "name": "Header",
+      "fields": [
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "image",
+          "default": "https://placehold.co/600x400"
+        },
+        {
+          "id": "navigation",
+          "name": "Navigation Links",
+          "type": "array",
+          "itemType": {
+            "type": "object",
+            "fields": [
+              {
+                "id": "label",
+                "name": "Label",
+                "type": "text",
+                "default": "Anything"
+              },
+              {
+                "id": "url",
+                "name": "URL",
+                "type": "text",
+                "default": "#"
+              }
+            ]
+          },
+          "default": [
+            { "label": "Home", "url": "/" },
+            { "label": "About", "url": "/about" },
+            { "label": "Contact", "url": "/contact" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "default": "Welcome to Our Landing Page"
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "textarea",
+          "default": "We help you launch quickly and effectively."
+        },
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "type": "image",
+          "default": "https://placehold.co/600x400"
+        },
+        {
+          "id": "showCTA",
+          "name": "Show Call to Action",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "id": "cta",
+          "name": "Call to Action",
+          "type": "object",
+          "fields": [
+            {
+              "id": "text",
+              "name": "Button Text",
+              "type": "text",
+              "default": "Get Started"
+            },
+            {
+              "id": "url",
+              "name": "Button URL",
+              "type": "text",
+              "default": "#get-started"
+            },
+            {
+              "id": "style",
+              "name": "Button Style",
+              "type": "select",
+              "options": [
+                { "value": "primary", "label": "Primary" },
+                { "value": "secondary", "label": "Secondary" }
+              ],
+              "default": "primary"
+            }
+          ],
+          "default": {
+            "text": "Get Started",
+            "url": "#get-started",
+            "style": "primary"
+          }
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "name": "Features",
+      "fields": [
+        {
+          "id": "sectionTitle",
+          "name": "Section Title",
+          "type": "text",
+          "default": "Features"
+        },
+        {
+          "id": "items",
+          "name": "Feature Items",
+          "type": "array",
+          "itemType": {
+            "type": "object",
+            "fields": [
+              {
+                "id": "icon",
+                "name": "Icon",
+                "type": "image",
+                "default": "https://placehold.co/600x400"
+              },
+              {
+                "id": "title",
+                "name": "Title",
+                "type": "text",
+                "default": "Title"
+              },
+              {
+                "id": "description",
+                "name": "Description",
+                "type": "textarea",
+                "default": "Desc"
+              }
+            ]
+          },
+          "default": [
+            {
+              "default": "https://placehold.co/600x400",
+              "title": "Fast",
+              "description": "Super fast performance."
+            },
+            {
+              "default": "https://placehold.co/600x400",
+              "title": "Reliable",
+              "description": "99.9% uptime guarantee."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testimonials",
+      "name": "Testimonials",
+      "fields": [
+        {
+          "id": "showTestimonials",
+          "name": "Show Testimonials",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "id": "testimonials",
+          "name": "Testimonials List",
+          "type": "array",
+          "itemType": {
+            "type": "object",
+            "fields": [
+              {
+                "id": "name",
+                "name": "Customer Name",
+                "type": "text",
+                "default": "John"
+              },
+              {
+                "id": "quote",
+                "name": "Quote",
+                "type": "textarea",
+                "default": "Very nice!"
+              },
+              {
+                "id": "avatar",
+                "name": "Avatar",
+                "type": "image",
+                "default": "https://placehold.co/600x400"
+              },
+              {
+                "id": "rating",
+                "name": "Rating",
+                "type": "number",
+                "default": 5
+              }
+            ]
+          },
+          "default": [
+            {
+              "name": "Jane Doe",
+              "quote": "This service changed our business!",
+              "avatar": "https://placehold.co/600x400",
+              "rating": 5
+            },
+            {
+              "name": "John Smith",
+              "quote": "A must-have for startups.",
+              "avatar": "https://placehold.co/600x400",
+              "rating": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "fields": [
+        {
+          "id": "showSocialLinks",
+          "name": "Show Social Links",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "id": "socialLinks",
+          "name": "Social Links",
+          "type": "array",
+          "itemType": {
+            "type": "object",
+            "fields": [
+              {
+                "id": "platform",
+                "name": "Platform",
+                "type": "select",
+                "options": [
+                  { "value": "facebook", "label": "Facebook" },
+                  { "value": "twitter", "label": "Twitter" },
+                  { "value": "linkedin", "label": "LinkedIn" },
+                  { "value": "instagram", "label": "Instagram" }
+                ],
+                "default": "facebook"
+              },
+              {
+                "id": "url",
+                "name": "URL",
+                "type": "text",
+                "default": "#"
+              },
+              {
+                "id": "icon",
+                "name": "Icon",
+                "type": "image",
+                "default": "https://placehold.co/600x400"
+              }
+            ]
+          },
+          "default": [
+            {
+              "platform": "facebook",
+              "url": "https://facebook.com/example",
+              "icon": "https://placehold.co/600x400"
+            },
+            {
+              "platform": "twitter",
+              "url": "https://twitter.com/example",
+              "icon": "https://placehold.co/600x400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "styles",
+      "name": "Styles",
+      "fields": [
+        {
+          "id": "primaryFont",
+          "name": "Primary Font",
+          "type": "font",
+          "options": [
+            { "value": "Inter", "label": "Inter" },
+            { "value": "Roboto", "label": "Roboto" },
+            { "value": "Open Sans", "label": "Open Sans" }
+          ],
+          "default": "Inter",
+          "allowCustom": true
+        },
+        {
+          "id": "primaryColor",
+          "name": "Primary Color",
+          "type": "color",
+          "default": "#3366FF"
+        },
+        {
+          "id": "secondaryColor",
+          "name": "Secondary Color",
+          "type": "color",
+          "default": "#FF3366"
+        },
+        {
+          "id": "fontSize",
+          "name": "Base Font Size",
+          "type": "number",
+          "default": 16
+        }
+      ]
+    }
+  ],
+  "placeholders": {
+    "https://api.adkey-seo.com/api/website/get-website/{{seoId}}": {
+      "id": "demo-site",
+      "name": "Demo Website",
+      "domain": "example.com",
+      "settings": {
+        "primaryColor": "#3366FF",
+        "language": "en"
+      }
+    },
+    "https://api.adkey-seo.com/api/content/get-pages/{{seoId}}": [
+      { "id": "home", "title": "Home", "slug": "/" },
+      { "id": "about", "title": "About Us", "slug": "/about" },
+      { "id": "contact", "title": "Contact", "slug": "/contact" }
+    ]
+  }
+}
